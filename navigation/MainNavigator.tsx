@@ -9,6 +9,8 @@ import RegistroScreen from '../screens/RegistroScreen'
 import LoginScreen from '../screens/LoginScreen'
 import HomeScreen from '../screens/HomeScreen'
 import PerfilScreen from '../screens/PerfilScreen'
+import PartidasScreen from '../screens/PartidasScreen'
+import RankingScreen from '../screens/RankingScreen'
 
 const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -42,8 +44,8 @@ function MenuTabs() {
       />
 
       <Tab.Screen
-        name="Personaje"
-        component={HomeScreen}
+        name="Partida"
+        component={PartidasScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons
@@ -56,8 +58,8 @@ function MenuTabs() {
       />
 
       <Tab.Screen
-        name="Habilidades"
-        component={HomeScreen}
+        name="Ranking"
+        component={RankingScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons
