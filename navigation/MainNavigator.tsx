@@ -11,6 +11,9 @@ import HomeScreen from '../screens/HomeScreen'
 import PerfilScreen from '../screens/PerfilScreen'
 import PartidasScreen from '../screens/PartidasScreen'
 import RankingScreen from '../screens/RankingScreen'
+import Nivel1Screen from '../screens/Nivel1Screen'
+import Nivel2Screen from '../screens/Nivel2Screen'
+import Nivel3Screen from '../screens/Nivel3Screen'
 
 const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -123,6 +126,24 @@ export default function MainNavigator() {
           options={{
             headerShown: false
           }}
+        />
+
+        <Stack.Screen
+          name="Nivel1"
+          component={Nivel1Screen}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="Nivel2"
+          component={Nivel2Screen}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="Nivel3"
+          component={Nivel3Screen}
+          options={{ headerShown: false }}
         />
 
       </Stack.Navigator>
