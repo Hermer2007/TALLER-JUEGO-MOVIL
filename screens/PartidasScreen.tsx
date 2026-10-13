@@ -199,15 +199,20 @@ const styles = StyleSheet.create({
 
     titulo: {
         color: '#f1ddaf',
-        fontSize: 32,
-        fontWeight: 'bold',
-        letterSpacing: 2
+        fontSize: 30,
+        fontFamily: 'PressStart2P_400Regular',
+        textAlign: 'center',
+        lineHeight: 34,
+        letterSpacing: 1
     },
 
     subtitulo: {
         color: '#ffffff',
-        fontSize: 17,
-        marginTop: 8,
+        fontSize: 13,
+        fontFamily: 'PressStart2P_400Regular',
+        textAlign: 'center',
+        lineHeight: 22,
+        marginTop: 12,
         marginBottom: 30
     },
 
@@ -245,8 +250,9 @@ const styles = StyleSheet.create({
 
     numeroTexto: {
         color: '#071019',
-        fontSize: 24,
-        fontWeight: 'bold'
+        fontSize: 25,
+        fontFamily: 'PressStart2P_400Regular',
+        textAlign: 'center'
     },
 
     infoNivel: {
@@ -255,14 +261,18 @@ const styles = StyleSheet.create({
 
     nombreNivel: {
         color: '#f1ddaf',
-        fontSize: 19,
-        fontWeight: 'bold'
+        fontSize: 13,
+        fontFamily: 'PressStart2P_400Regular',
+        lineHeight: 20,
+        flexShrink: 1
     },
 
     descripcion: {
         color: '#d4d4d4',
-        fontSize: 13,
-        marginTop: 5
+        fontSize: 9,
+        fontFamily: 'PressStart2P_400Regular',
+        lineHeight: 16,
+        marginTop: 8
     },
 
     dificultad: {
@@ -288,8 +298,10 @@ const styles = StyleSheet.create({
 
     textoBoton: {
         color: '#071019',
-        fontSize: 16,
-        fontWeight: 'bold'
-    }
+        fontSize: 12,
+        fontFamily: 'PressStart2P_400Regular',
+        textAlign: 'center',
+        lineHeight: 20
+    },
 
 })

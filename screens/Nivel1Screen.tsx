@@ -294,15 +294,15 @@ export default function Nivel1Screen({ navigation, route }: any) {
                         {casilla === 2 &&
                           !estaJugador && (
 
-                          <Ionicons
-                            name="flag"
-                            size={
-                              tamanoCasilla *
-                              0.6
-                            }
-                            color="white"
-                          />
-                        )}
+                            <Ionicons
+                              name="flag"
+                              size={
+                                tamanoCasilla *
+                                0.6
+                              }
+                              color="white"
+                            />
+                          )}
                       </View>
                     )
                   }
@@ -400,19 +400,24 @@ const styles = StyleSheet.create({
     backgroundColor:
       'rgba(0,0,0,0.55)',
     alignItems: 'center',
-    paddingTop: 20
+    paddingTop: 70
   },
 
   titulo: {
     color: '#f1ddaf',
-    fontSize: 27,
-    fontWeight: 'bold'
+    fontSize: 25,
+    fontFamily: 'PressStart2P_400Regular',
+    textAlign: 'center',
+    lineHeight: 30
   },
 
   nombre: {
     color: 'white',
-    fontSize: 15,
-    marginTop: 3
+    fontSize: 13,
+    fontFamily: 'PressStart2P_400Regular',
+    textAlign: 'center',
+    lineHeight: 22,
+    marginTop: 5
   },
 
   cronometro: {
@@ -430,8 +435,9 @@ const styles = StyleSheet.create({
 
   tiempo: {
     color: 'white',
-    fontSize: 20,
-    fontWeight: 'bold'
+    fontSize: 18,
+    fontFamily: 'PressStart2P_400Regular',
+    textAlign: 'center'
   },
 
   laberinto: {

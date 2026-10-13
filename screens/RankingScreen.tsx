@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {FlatList,ImageBackground,StyleSheet,Text,View} from 'react-native'
+import { FlatList, ImageBackground, StyleSheet, Text, View } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { supabase } from '../service/supabase'
 
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
 
     overlay: {
         flex: 1,
-        backgroundColor:'rgba(0,0,0,0.62)',
+        backgroundColor: 'rgba(0,0,0,0.62)',
         paddingHorizontal: 12
     },
 
@@ -206,16 +206,20 @@ const styles = StyleSheet.create({
 
     titulo: {
         color: '#f1ddaf',
-        fontSize: 30,
-        fontWeight: 'bold',
-        marginTop: 5,
-        letterSpacing: 2
+        fontSize: 25,
+        fontFamily: 'PressStart2P_400Regular',
+        textAlign: 'center',
+        lineHeight: 32,
+        marginTop: 10
     },
 
     subtitulo: {
         color: '#ffffff',
-        fontSize: 14,
-        marginTop: 4
+        fontSize: 13,
+        fontFamily: 'PressStart2P_400Regular',
+        textAlign: 'center',
+        lineHeight: 20,
+        marginTop: 10
     },
 
     cabeceraTabla: {
@@ -249,41 +253,52 @@ const styles = StyleSheet.create({
     colTop: {
         width: '12%',
         color: '#f1ddaf',
-        fontWeight: 'bold',
+        fontSize: 12,
+        fontFamily: 'PressStart2P_400Regular',
         textAlign: 'center'
     },
 
     colJugador: {
         width: '25%',
         color: '#ffffff',
-        fontWeight: 'bold',
-        paddingHorizontal: 3
+        fontSize: 10,
+        fontFamily: 'PressStart2P_400Regular',
+        textAlign: 'center',
+        paddingHorizontal: 2
     },
 
     colPersonaje: {
         width: '25%',
         color: '#d6b47a',
-        textAlign: 'center'
+        fontSize: 8.75,
+        fontFamily: 'PressStart2P_400Regular',
+        textAlign: 'center',
+        paddingHorizontal: 2
     },
 
     colNivel: {
         width: '16%',
         color: '#ffffff',
-        textAlign: 'center',
-        fontWeight: 'bold'
+        fontSize: 10,
+        fontFamily: 'PressStart2P_400Regular',
+        textAlign: 'center'
     },
 
     colTiempo: {
         width: '22%',
         color: '#f1ddaf',
-        textAlign: 'center',
-        fontWeight: 'bold'
+        fontSize: 10,
+        fontFamily: 'PressStart2P_400Regular',
+        textAlign: 'center'
     },
 
     sinPartidas: {
         color: '#cccccc',
+        fontSize: 11,
+        fontFamily: 'PressStart2P_400Regular',
         textAlign: 'center',
+        lineHeight: 22,
         marginTop: 60,
-        fontSize: 16
-    }
+        paddingHorizontal: 15
+    },
 })

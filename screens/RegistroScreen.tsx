@@ -1,4 +1,4 @@
-import {Image, Pressable, StyleSheet, Text, TextInput, View} from 'react-native'
+import { Image, Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 import { Alert } from 'react-native'
 import { supabase } from '../service/supabase'
@@ -12,41 +12,41 @@ export default function RegistroScreen({ navigation }: any) {
 
   async function registrar() {
 
-  if (usuario === '' || correo === '' || contrasenia === '' || confirmar === '') {
-    Alert.alert('AVISO', 'Complete todos los campos')
-    return
+    if (usuario === '' || correo === '' || contrasenia === '' || confirmar === '') {
+      Alert.alert('AVISO', 'Complete todos los campos')
+      return
+    }
+
+    if (contrasenia !== confirmar) {
+      Alert.alert('ERROR', 'Las contraseñas no coinciden')
+      return
+    }
+
+    const { error } = await supabase
+      .from('usuarios')
+      .insert({
+        nombre: usuario,
+        correo: correo,
+        contrasenia: contrasenia
+      })
+
+    if (error) {
+      Alert.alert('ERROR', 'No se pudo registrar')
+      return
+    }
+
+    Alert.alert(
+      'REGISTRO',
+      'Usuario registrado correctamente'
+    )
+
+    setUsuario('')
+    setCorreo('')
+    setContrasenia('')
+    setConfirmar('')
+
+    navigation.navigate('Login')
   }
-
-  if (contrasenia !== confirmar) {
-    Alert.alert('ERROR', 'Las contraseñas no coinciden')
-    return
-  }
-
-  const { error } = await supabase
-    .from('usuarios')
-    .insert({
-      nombre: usuario,
-      correo: correo,
-      contrasenia: contrasenia
-    })
-
-  if (error) {
-    Alert.alert('ERROR', 'No se pudo registrar')
-    return
-  }
-
-  Alert.alert(
-    'REGISTRO',
-    'Usuario registrado correctamente'
-  )
-
-  setUsuario('')
-  setCorreo('')
-  setContrasenia('')
-  setConfirmar('')
-
-  navigation.navigate('Login')
-}
 
   return (
     <View style={styles.container}>
@@ -141,8 +141,11 @@ const styles = StyleSheet.create({
 
   titulo: {
     color: '#f1ddaf',
-    fontSize: 27,
-    fontWeight: 'bold',
+    fontSize: 20,
+    fontFamily: 'PressStart2P_400Regular',
+    textAlign: 'center',
+    lineHeight: 28,
+    width: '100%',
     marginBottom: 30
   },
 

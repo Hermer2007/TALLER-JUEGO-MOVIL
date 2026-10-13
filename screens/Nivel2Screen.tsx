@@ -365,20 +365,24 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'rgba(0,0,0,0.55)',
     alignItems: 'center',
-    paddingTop: 18
+    paddingTop: 70
   },
 
   titulo: {
     color: '#f1ddaf',
-    fontSize: 27,
-    fontWeight: 'bold',
-    letterSpacing: 1
+    fontSize: 25,
+    fontFamily: 'PressStart2P_400Regular',
+    textAlign: 'center',
+    lineHeight: 30
   },
 
   nombre: {
     color: '#ffffff',
-    fontSize: 15,
-    marginTop: 3
+    fontSize: 13,
+    fontFamily: 'PressStart2P_400Regular',
+    textAlign: 'center',
+    lineHeight: 22,
+    marginTop: 5
   },
 
   cronometro: {
@@ -396,8 +400,9 @@ const styles = StyleSheet.create({
 
   tiempo: {
     color: '#ffffff',
-    fontSize: 20,
-    fontWeight: 'bold'
+    fontSize: 18,
+    fontFamily: 'PressStart2P_400Regular',
+    textAlign: 'center'
   },
 
   laberinto: {

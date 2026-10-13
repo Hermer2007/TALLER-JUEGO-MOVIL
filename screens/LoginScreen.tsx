@@ -1,4 +1,4 @@
-import {Alert, Image, Pressable, StyleSheet, Text, TextInput, View} from 'react-native'
+import { Alert, Image, Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 import { supabase } from '../service/supabase'
 import { guardarUsuario } from '../service/usuarioActual'
@@ -10,36 +10,36 @@ export default function LoginScreen({ navigation }: any) {
 
   async function ingresar() {
 
-  if (usuario === '' || contrasenia === '') {
-    Alert.alert('AVISO', 'Complete todos los campos')
-    return
+    if (usuario === '' || contrasenia === '') {
+      Alert.alert('AVISO', 'Complete todos los campos')
+      return
+    }
+
+    const { data, error } = await supabase
+      .from('usuarios')
+      .select()
+      .eq('nombre', usuario)
+      .eq('contrasenia', contrasenia)
+
+    if (error) {
+      Alert.alert('ERROR', 'No se pudo iniciar sesión')
+      return
+    }
+
+    if (data.length === 0) {
+      Alert.alert('ERROR', 'Usuario o contraseña incorrectos')
+      return
+    }
+
+    Alert.alert(
+      'BIENVENIDO',
+      'Inicio de sesión correcto'
+    )
+
+    guardarUsuario(data[0].nombre)
+
+    navigation.navigate('Menu')
   }
-
-  const { data, error } = await supabase
-    .from('usuarios')
-    .select()
-    .eq('nombre', usuario)
-    .eq('contrasenia', contrasenia)
-
-  if (error) {
-    Alert.alert('ERROR', 'No se pudo iniciar sesión')
-    return
-  }
-
-  if (data.length === 0) {
-    Alert.alert('ERROR', 'Usuario o contraseña incorrectos')
-    return
-  }
-
-  Alert.alert(
-    'BIENVENIDO',
-    'Inicio de sesión correcto'
-  )
-
-  guardarUsuario(data[0].nombre)
-
-  navigation.navigate('Menu')
-}
 
   return (
     <View style={styles.container}>
@@ -119,8 +119,11 @@ const styles = StyleSheet.create({
 
   titulo: {
     color: '#f1ddaf',
-    fontSize: 27,
-    fontWeight: 'bold',
+    fontSize: 20,
+    fontFamily: 'PressStart2P_400Regular',
+    textAlign: 'center',
+    lineHeight: 28,
+    width: '100%',
     marginBottom: 30
   },
 

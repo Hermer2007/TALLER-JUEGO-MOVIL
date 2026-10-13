@@ -1,52 +1,52 @@
 import { Image, ImageBackground, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-    export default function WelcomeScreen({ navigation }: any) {
+export default function WelcomeScreen({ navigation }: any) {
     return (
         <ImageBackground
-        source={require('../assets/images/fondo-juego.png')}
-        style={styles.fondo}
-        resizeMode="cover"
+            source={require('../assets/images/fondo-juego.png')}
+            style={styles.fondo}
+            resizeMode="cover"
         >
-        <View style={styles.overlay}>
-            
-            <Image
-            source={require('../assets/images/titulo-juego.png')}
-            style={styles.logo}
-            />
+            <View style={styles.overlay}>
 
-            <Text style={styles.subtitulo}>
-            TU HISTORIA COMIENZA AQUÍ
-            </Text>
+                <Image
+                    source={require('../assets/images/titulo-juego.png')}
+                    style={styles.logo}
+                />
 
-            <Pressable
-            style={styles.botonPrincipal}
-            onPress={() => navigation.navigate('Registro')}
-            >
-            <Text style={styles.textoBotonPrincipal}>
-                Registrarse
-            </Text>
-            </Pressable>
+                <Text style={styles.subtitulo}>
+                    TU HISTORIA COMIENZA AQUÍ
+                </Text>
 
-            <Pressable
-            style={styles.botonSecundario}
-            onPress={() => navigation.navigate('Login')}
-            >
-            <Text style={styles.textoBotonSecundario}>
-                Iniciar sesión
-            </Text>
-            </Pressable>
+                <Pressable
+                    style={styles.botonPrincipal}
+                    onPress={() => navigation.navigate('Registro')}
+                >
+                    <Text style={styles.textoBotonPrincipal}>
+                        Registrarse
+                    </Text>
+                </Pressable>
 
-            <Text style={styles.frase}>
-            “Todo gran héroe comienza con un primer paso”
-            </Text>
+                <Pressable
+                    style={styles.botonSecundario}
+                    onPress={() => navigation.navigate('Login')}
+                >
+                    <Text style={styles.textoBotonSecundario}>
+                        Iniciar sesión
+                    </Text>
+                </Pressable>
 
-        </View>
+                <Text style={styles.frase}>
+                    “Todo gran héroe comienza con un primer paso”
+                </Text>
+
+            </View>
         </ImageBackground>
     )
-    }
+}
 
-    const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     fondo: {
         flex: 1
     },
@@ -68,11 +68,14 @@ import React from 'react'
 
     subtitulo: {
         color: '#d8c29d',
-        fontSize: 15,
-        fontWeight: 'bold',
-        letterSpacing: 1,
+        fontSize: 12,
+        fontFamily: 'PressStart2P_400Regular',
+        textAlign: 'center',
+        lineHeight: 22,
+        letterSpacing: 0,
         marginBottom: 55,
-        justifyContent: 'space-between',
+        width: '100%',
+        flexShrink: 1
     },
 
     botonPrincipal: {
@@ -108,9 +111,12 @@ import React from 'react'
 
     frase: {
         color: '#e8e0d4',
-        fontSize: 16,
-        fontStyle: 'italic',
+        fontSize: 10,
+        fontFamily: 'PressStart2P_400Regular',
         textAlign: 'center',
-        marginTop: 55
+        lineHeight: 22,
+        marginTop: 55,
+        width: '100%',
+        flexShrink: 1
     }
-    })
+})

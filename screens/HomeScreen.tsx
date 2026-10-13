@@ -118,7 +118,7 @@ export default function HomeScreen({ navigation }: any) {
               Personaje seleccionado: {personajeSeleccionado}
             </Text>
           )}
-          
+
           <Pressable
             style={[
               styles.botonContinuar,
@@ -167,15 +167,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 60,
+    paddingVertical: 20,
     borderBottomWidth: 1,
     borderBottomColor: '#594a35'
   },
 
   logo: {
     color: '#d6b47a',
-    fontSize: 25,
-    fontWeight: 'bold',
-    letterSpacing: 1
+    fontSize: 18,
+    fontFamily: 'PressStart2P_400Regular',
+    lineHeight: 22,
+    flexShrink: 1
   },
 
   contenido: {
@@ -187,16 +189,21 @@ const styles = StyleSheet.create({
 
   titulo: {
     color: '#f1ddaf',
-    fontSize: 28,
-    fontWeight: 'bold',
-    textAlign: 'center'
+    fontSize: 20,
+    fontFamily: 'PressStart2P_400Regular',
+    textAlign: 'center',
+    lineHeight: 28,
+    width: '100%'
   },
 
   subtitulo: {
     color: '#ffffff',
-    fontSize: 16,
-    marginTop: 8,
-    textAlign: 'center'
+    fontSize: 12,
+    fontFamily: 'PressStart2P_400Regular',
+    marginTop: 12,
+    textAlign: 'center',
+    lineHeight: 20,
+    width: '100%'
   },
 
   contenedorPersonajes: {
@@ -240,8 +247,10 @@ const styles = StyleSheet.create({
 
   textoSeleccionado: {
     color: '#f1ddaf',
-    fontSize: 16,
-    fontWeight: 'bold',
+    fontSize: 12,
+    fontFamily: 'PressStart2P_400Regular',
+    textAlign: 'center',
+    lineHeight: 20,
     marginTop: 20
   },
 
@@ -262,7 +271,7 @@ const styles = StyleSheet.create({
 
   textoBoton: {
     color: '#071019',
-    fontSize: 16,
-    fontWeight: 'bold'
+    fontSize: 12,
+    fontFamily: 'PressStart2P_400Regular'
   }
 })

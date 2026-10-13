@@ -360,20 +360,22 @@ const styles = StyleSheet.create({
   },
 
   header: {
-    height: 70,
+    height: 110,
     backgroundColor: '#071019',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
+    paddingHorizontal: 30,
     borderBottomWidth: 1,
     borderBottomColor: '#594a35'
   },
 
   titulo: {
     color: '#f1ddaf',
-    fontSize: 24,
-    fontWeight: 'bold'
+    fontSize: 25,
+    fontFamily: 'PressStart2P_400Regular',
+    textAlign: 'center',
+    lineHeight: 26
   },
 
   contenido: {
@@ -437,14 +439,16 @@ const styles = StyleSheet.create({
   },
 
   label: {
-    fontWeight: 'bold',
-    color: '#333'
+    color: '#333',
+    fontSize: 13,
+    fontFamily: 'PressStart2P_400Regular',
+    lineHeight: 20
   },
 
   valor: {
     marginTop: 5,
     color: '#222',
-    fontSize: 16
+    fontSize: 17
   },
 
   botonCerrar: {
@@ -459,8 +463,9 @@ const styles = StyleSheet.create({
 
   textoCerrar: {
     color: '#ff8d7f',
-    fontSize: 16,
-    fontWeight: 'bold'
-  }
-
+    fontSize: 13,
+    fontFamily: 'PressStart2P_400Regular',
+    textAlign: 'center',
+    lineHeight: 22
+  },
 })
